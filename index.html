@@ -3,219 +3,183 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RocketMath | Tutorías by Adrian</title>
+  <title>RocketMath - Tutorias de Adrian</title>
 
-  <!-- Bootstrap 5 CSS — CDN, sin modificar -->
+  <!-- bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-
-  <!-- Bootstrap Icons — CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- fuentes de google -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Exo+2:wght@400;600&display=swap" rel="stylesheet" />
 
-  <!-- CSS propio -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles_alumno.css" />
 </head>
 <body>
 
-
-  <!-- HEADER -->
-  <header id="header">
+  <!-- navbar -->
+  <!-- esto lo saque del ejemplo de bootstrap y lo modifique -->
+  <nav class="navbar navbar-dark bg-dark sticky-top">
     <div class="container">
-      <nav class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+      <a class="navbar-brand logo" href="#">ROCKET<span>MATH</span></a>
 
-        <div class="logo-texto">ROCKET<span>MATH</span></div>
+      <!-- no se como hacer el menu sin el boton de bootstrap asi que lo deje -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <ul class="list-unstyled d-flex flex-wrap gap-1 mb-0">
-          <li><a href="#hero"       class="nav-link-custom">INICIO</a></li>
-          <li><a href="#servicios"  class="nav-link-custom">SERVICIOS</a></li>
-          <li><a href="#beneficios" class="nav-link-custom">SOBRE MÍ</a></li>
-          <li><a href="#contacto"   class="nav-link-custom">CONTACTO</a></li>
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#yo">Sobre mi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
         </ul>
-
-        <a href="#contacto" class="btn-rocket" style="font-size:0.7rem; padding:10px 22px;">ESCRIBIME YA</a>
-
-      </nav>
+      </div>
     </div>
-  </header>
+  </nav>
 
 
-  <!-- CONTENIDO HERO O MAIN  -->
-  <section id="hero">
+  <!-- seccion de inicio/hero -->
+  <section id="inicio" class="seccion-hero">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8">
+          <!-- badge que vi en un tutorial de youtube -->
+          <span class="badge bg-primary mb-3">CHAMPION RANK - NO ES MENTIRA</span>
+
+          <h1 class="titulo-grande">
+            SUBI DE RANGO EN <span class="texto-azul">ROCKET LEAGUE</span>
+            <br>Y EN <span class="texto-naranja">MATES</span> TAMBIEN
+          </h1>
+
+          <p class="mt-3 mb-4" style="color: #aaaaaa; font-size: 1.1rem;">
+            Soy Adrian, tengo 17 y llegue a Champion yo solo.
+            Tambien le entro a las mates. Si queres clases de las dos cosas, aqui estoy.
+          </p>
+
+          <!-- los botones los hice con bootstrap pero el color lo cambie en el css -->
+          <a href="#contacto" class="btn btn-naranja me-2">QUIERO CLASES</a>
+          <a href="#servicios" class="btn btn-outline-light">Ver servicios</a>
+        </div>
+
+        <!-- este div lo intente poner bonito pero no me quedo tan bien -->
+        <div class="col-md-4 d-none d-md-flex align-items-center justify-content-center">
+          <div class="circulo-deco">🎮</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- servicios -->
+  <section id="servicios" class="seccion-normal bg-oscuro2">
+    <div class="container">
+
+      <h2 class="titulo-seccion mb-2">Lo que enseño</h2>
+      <p class="subtitulo-seccion mb-5">Clases en vivo, conmigo, te explico hasta que entiendas.</p>
+
+      <!-- use el grid de bootstrap para las tarjetas -->
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="tarjeta-servicio">
+            <i class="bi bi-controller icono-tarjeta"></i>
+            <h5>Mecanicas de RL</h5>
+            <p>Air dribbles, ceiling shots, rotaciones. Pase por lo mismo en Gold y se exactamente que trabas hay en cada rango.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="tarjeta-servicio">
+            <i class="bi bi-calculator icono-tarjeta"></i>
+            <h5>Matematicas</h5>
+            <p>Algebra, geometria, trigo. No soy genio pero lo explico sin tanto rollo. Ideal si tenes examen pronto.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="tarjeta-servicio">
+            <i class="bi bi-layers icono-tarjeta"></i>
+            <h5>Pack completo</h5>
+            <p>Queres subir de rango y pasar el bimestre? Hacemos las dos cosas. Vos decis como armar el plan.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="tarjeta-servicio">
+            <i class="bi bi-graph-up-arrow icono-tarjeta"></i>
+            <h5>Revisar replays</h5>
+            <p>Mandame tu replay y te digo que estas haciendo mal. Posicionamiento, boost waste, todo eso se ve rapido.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="tarjeta-servicio">
+            <i class="bi bi-journal-text icono-tarjeta"></i>
+            <h5>Apuntes</h5>
+            <p>Despues de cada sesion te mando lo que vimos por Discord o chat. Sin excusas de que no lo tenes anotado.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="tarjeta-servicio">
+            <i class="bi bi-headset icono-tarjeta"></i>
+            <h5>Por Discord o Meet</h5>
+            <!-- esto fue lo que mas me costo, centrar bien el texto en la tarjeta -->
+            <p>Horarios flexibles, antes o despues del cole, fines de semana, lo que funcione para los dos.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- sobre mi -->
+  <!-- aqui queria poner una imagen pero no tenia foto buena asi que puse el emoji -->
+  <section id="yo" class="seccion-normal">
     <div class="container">
       <div class="row align-items-center">
 
-        <div class="col-lg-7">
-          <div class="hero-badge">CHAMPION — NO SON CASACAS, ES REAL</div>
-
-          <h1 class="hero-titulo">
-            SUBÍ DE RANGO<br>
-            EN <span class="acento">ROCKET LEAGUE</span><br>
-            Y EN <span class="acento-naranja">MATES</span> TAMBIEN
-          </h1>
-
-          <p class="hero-desc">
-            Soy Adrian, tengo 17 y llegué a Champion solo, ganando exp en mis ratos libres.
-            También le entro a las mates porque me toca. Si querés que te enseñe
-            las dos cosas, aquí estoy — sin tanto rollo ni precios de universidad.
-          </p>
-
-          <div class="d-flex flex-wrap gap-3">
-            <a href="#contacto"  class="btn-rocket">DALE, QUIERO CLASES</a>
-            <a href="#servicios" class="btn-outline-rocket">¿QUÉ ENSEÑÁS?</a>
-          </div>
-
-          <div class="rank-chip">
-            <i class="bi bi-trophy-fill"></i>
-            EL PATOJO MAS PILAS DE TODA GUATE
-          </div>
+        <div class="col-md-5 text-center mb-4 mb-md-0">
+          <div class="caja-foto">🎮</div>
         </div>
 
-        <div class="col-lg-5 d-none d-lg-flex justify-content-center align-items-center">
-          <div class="hero-esfera">♥</div>
-        </div>
+        <div class="col-md-7">
+          <h2 class="titulo-seccion mb-4">Por que yo y no otro?</h2>
 
-      </div>
-    </div>
-  </section>
-
-  <div class="divisor"></div>
-
-
-  <!-- SERVICIOS -->
-  <section id="servicios">
-    <div class="container">
-
-      <div class="mb-5">
-        <h2 class="section-titulo"><span class="linea"></span>LO QUE ENSEÑO</h2>
-        <p class="section-subtitulo">
-          Nada de tutoriales random de YouTube. Esto es en vivo, conmigo, y te explico hasta que entiendas.
-        </p>
-      </div>
-
-      <div class="row g-4">
-
-        <div class="col-md-4">
-          <div class="card-servicio">
-            <i class="bi bi-controller card-icono"></i>
-            <h3 class="card-titulo">MECÁNICAS DE RL</h3>
-            <p class="card-texto">
-              Air dribbles, ceiling shots, flicks, rotaciones — lo que sea que te tenga atorado.
-              Yo pasé por lo mismo en Gold y sé exactamente qué trabas hay en cada rango.
-              Te juro que no te voy a dejar sin entender.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card-servicio">
-            <i class="bi bi-calculator card-icono"></i>
-            <h3 class="card-titulo">MATES (sí, también)</h3>
-            <p class="card-texto">
-              Álgebra, geometría, trigo, lo que sea que tu profe explica mal o muy rápido.
-              No soy genio pero le entiendo bien y lo explico sin tanto rollo técnico.
-              Ideal si tenés examen y no entiendes nada.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card-servicio">
-            <i class="bi bi-layers card-icono"></i>
-            <h3 class="card-titulo">PACK COMPLETO</h3>
-            <p class="card-texto">
-              ¿Querés subir de rango y pasar el bimestre? Perfecto, hacemos las dos cosas.
-              Una sesión de RL, otra de mates, o las mezclamos si querés.
-              Vos decidís cómo armar tu plan.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card-servicio">
-            <i class="bi bi-graph-up-arrow card-icono"></i>
-            <h3 class="card-titulo">REVISAR TUS REPLAYS</h3>
-            <p class="card-texto">
-              Mandame tu replay y te digo exactamente qué estás haciendo mal.
-              Posicionamiento, boost waste, agarrar boost del mid cuando no es el momento —
-              todo eso se ve y se corrige rápido.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card-servicio">
-            <i class="bi bi-journal-text card-icono"></i>
-            <h3 class="card-titulo">APUNTES Y EJERCICIOS</h3>
-            <p class="card-texto">
-              Después de cada sesión te paso lo que vimos por escrito.
-              Sin excusas de "es que no lo tengo anotado" — te lo mando yo
-              directo al Discord o al chat.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card-servicio">
-            <i class="bi bi-headset card-icono"></i>
-            <h3 class="card-titulo">TODO POR DISCORD</h3>
-            <p class="card-texto">
-              Las clases son por Discord o Meet, lo que te quede más fácil.
-              Horarios bien flexibles — antes o después del cole, fines de semana,
-              lo que funcione para los dos.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="divisor"></div>
-
-
-  <!-- BENEFICIOS / SOBRE MÍ -->
-  <section id="beneficios">
-    <div class="container">
-      <div class="row align-items-center g-5">
-
-        <div class="col-lg-5">
-          <div class="beneficios-imagen">🎮</div>
-        </div>
-
-        <div class="col-lg-7">
-          <h2 class="section-titulo mb-4"><span class="linea"></span>¿POR QUÉ YO Y NO OTRO?</h2>
-
-          <div class="lista-beneficio">
-            <div class="icono-check"><i class="bi bi-trophy-fill"></i></div>
+          <!-- intente hacer como una lista de checks, vi algo parecido en un video -->
+          <div class="item-razon">
+            <span class="check-icon">✓</span>
             <div>
-              <h5>SÍ SOY CHAMPION, NO ES MENTIRA</h5>
-              <p>No soy uno que llegó a Plat y ya se cree coach. Llegué a Champion farmeando de verdad, sin smurfs ni nada de eso. Te puedo mostrar el perfil si no me creés.</p>
+              <strong>Si soy Champion, no es mentira</strong>
+              <p>Llegue a Champion yo solo, sin smurfs. Te puedo mostrar el perfil.</p>
             </div>
           </div>
 
-          <div class="lista-beneficio">
-            <div class="icono-check"><i class="bi bi-person-check-fill"></i></div>
+          <div class="item-razon">
+            <span class="check-icon">✓</span>
             <div>
-              <h5>TENGO 17, SÉ CÓMO ES EL PEDO</h5>
-              <p>No soy un adulto que te va a hablar como si fuera tu profe del cole. Sé lo que es tener tareas, querer jugar y no tener tiempo para nada. Te entiendo.</p>
+              <strong>Tengo 17, se como es el pedo</strong>
+              <p>No soy un adulto. Se lo que es tener tareas y querer jugar. Te entiendo.</p>
             </div>
           </div>
 
-          <div class="lista-beneficio">
-            <div class="icono-check"><i class="bi bi-clock-fill"></i></div>
+          <div class="item-razon">
+            <span class="check-icon">✓</span>
             <div>
-              <h5>HORARIOS SIN DRAMA</h5>
-              <p>Si tenés partido de RL un sábado a las 9pm, no hay problema. Movemos la sesión. No es una empresa, somos personas.</p>
+              <strong>Horarios sin drama</strong>
+              <p>Si tenes partido un sabado a las 9pm no hay problema. Movemos la sesion.</p>
             </div>
           </div>
 
-          <div class="lista-beneficio">
-            <div class="icono-check"><i class="bi bi-lightning-charge-fill"></i></div>
+          <div class="item-razon">
+            <span class="check-icon">✓</span>
             <div>
-              <h5>DE VERDAD SE NOTE EL AVANCE</h5>
-              <p>No te voy a cobrar y dejarte igual. Si después de 3 sesiones no sentís que mejoraste, me decís y hablamos. No tengo ningún problema.</p>
+              <strong>De verdad se note el avance</strong>
+              <p>Si despues de 3 sesiones no mejoraste, me dices y hablamos. Sin problema.</p>
             </div>
           </div>
 
@@ -224,135 +188,113 @@
     </div>
   </section>
 
-  <div class="divisor"></div>
 
-
-  <!-- CONTACTO -->
-  <section id="contacto">
+  <!-- contacto -->
+  <section id="contacto" class="seccion-normal bg-oscuro2">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-7">
+        <div class="col-md-7">
 
-          <div class="text-center mb-5">
-            <h2 class="section-titulo"><span class="linea"></span>ESCRIBIME</h2>
-            <p class="section-subtitulo mx-auto">
-              Llenás esto, te respondo hoy o mañana en la mañana.
-              La primera sesión es gratis para ver si el fit es bueno.
-            </p>
-          </div>
+          <h2 class="titulo-seccion text-center mb-2">Escribime</h2>
+          <p class="subtitulo-seccion text-center mb-4">Te respondo hoy o mañana. La primera sesion es gratis.</p>
 
-          <div class="form-wrapper">
-            <form>
+          <!-- el formulario me costo bastante, sobre todo el diseño -->
+          <form class="formulario-caja">
 
-              <div class="mb-3">
-                <label class="form-label-custom">¿Cómo te llamás?</label>
-                <input type="text" class="form-control input-custom" placeholder="Tu nombre" />
+            <div class="mb-3">
+              <label class="form-label label-form">Como te llamas?</label>
+              <input type="text" class="form-control input-form" placeholder="Tu nombre" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label label-form">Tu correo</label>
+              <input type="email" class="form-control input-form" placeholder="para escribirte de vuelta" />
+            </div>
+
+            <!-- intente poner los selects en fila, con row de bootstrap -->
+            <div class="row mb-3">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label class="form-label label-form">Que necesitas?</label>
+                <select class="form-control input-form">
+                  <option value="" disabled selected>Elegi una</option>
+                  <option>Rocket League</option>
+                  <option>Matematicas</option>
+                  <option>Los dos</option>
+                  <option>Solo replay</option>
+                </select>
               </div>
-
-              <div class="mb-3">
-                <label class="form-label-custom">Tu correo</label>
-                <input type="email" class="form-control input-custom" placeholder="para poder escribirte de vuelta" />
+              <div class="col-md-6">
+                <label class="form-label label-form">Rango en RL</label>
+                <select class="form-control input-form">
+                  <option value="" disabled selected>Tu rango</option>
+                  <option>Bronze o Silver</option>
+                  <option>Gold</option>
+                  <option>Platinum</option>
+                  <option>Diamond</option>
+                  <option>Champion o mas</option>
+                  <option>No juego RL</option>
+                </select>
               </div>
+            </div>
 
-              <div class="row g-3 mb-3">
-                <div class="col-md-6">
-                  <label class="form-label-custom">¿Qué necesitás?</label>
-                  <select class="form-control input-custom">
-                    <option value="" disabled selected>Elegí una</option>
-                    <option>Rocket League</option>
-                    <option>Matemáticas</option>
-                    <option>Los dos (pack)</option>
-                    <option>Solo revisar replay</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label-custom">Rango en RL</label>
-                  <select class="form-control input-custom">
-                    <option value="" disabled selected>Tu rango</option>
-                    <option>Bronze / Silver (no pasa nada)</option>
-                    <option>Gold</option>
-                    <option>Platinum</option>
-                    <option>Diamond</option>
-                    <option>Champion o más</option>
-                    <option>No juego RL, solo mates</option>
-                  </select>
-                </div>
-              </div>
+            <div class="mb-4">
+              <label class="form-label label-form">Contame un poco</label>
+              <textarea class="form-control input-form" rows="4" placeholder="En que estas atorado, que queres mejorar..."></textarea>
+            </div>
 
-              <div class="mb-4">
-                <label class="form-label-custom">Contame un poco</label>
-                <textarea class="form-control input-custom" rows="5" placeholder="En qué andás atorado, qué querés mejorar, lo que sea..."></textarea>
-              </div>
+            <button type="submit" class="btn btn-naranja w-100">
+              Mandar mensaje <i class="bi bi-send-fill ms-1"></i>
+            </button>
 
-              <div class="d-grid">
-                <button type="submit" class="btn-rocket" style="width:100%; font-size:0.85rem; padding:16px;">
-                  MANDAR MENSAJE <i class="bi bi-send-fill" style="margin-left:8px;"></i>
-                </button>
-              </div>
-
-            </form>
-          </div>
-
+          </form>
         </div>
       </div>
     </div>
   </section>
 
 
-  <!-- FOOTER -->
-  <footer id="footer">
+  <!-- footer -->
+  <!-- esto lo hice rapido, no le puse tanto diseño -->
+  <footer class="footer-mio">
     <div class="container">
-      <div class="row g-4">
+      <div class="row">
 
-        <div class="col-lg-4">
-          <div class="footer-logo">ROCKET<span style="color:var(--naranja)">MATH</span></div>
-          <p class="footer-desc">
-            Clases de RL y mates con Adrian Taracena.
-            17 años, Champion rank, desde Guatemala.
-            Sin tanto rollo.
+        <div class="col-md-4 mb-4">
+          <div class="logo footer-logo">ROCKET<span>MATH</span></div>
+          <p style="color: #555; font-size: 0.85rem; margin-top: 8px;">
+            Clases de RL y mates con Adrian. 17 años, Champion, desde Guatemala.
           </p>
         </div>
 
-        <div class="col-sm-6 col-lg-2">
-          <p class="footer-titulo-col">SECCIONES</p>
-          <a href="#hero"       class="footer-link">Inicio</a>
-          <a href="#servicios"  class="footer-link">Servicios</a>
-          <a href="#beneficios" class="footer-link">Sobre mí</a>
-          <a href="#contacto"   class="footer-link">Contacto</a>
+        <div class="col-md-4 mb-4">
+          <p class="footer-titulo-col">Secciones</p>
+          <a href="#inicio" class="footer-link">Inicio</a>
+          <a href="#servicios" class="footer-link">Servicios</a>
+          <a href="#yo" class="footer-link">Sobre mi</a>
+          <a href="#contacto" class="footer-link">Contacto</a>
         </div>
 
-        <div class="col-sm-6 col-lg-3">
-          <p class="footer-titulo-col">LO QUE ENSEÑO</p>
-          <a href="#servicios" class="footer-link">Rocket League</a>
-          <a href="#servicios" class="footer-link">Matemáticas</a>
-          <a href="#servicios" class="footer-link">Pack combinado</a>
-          <a href="#servicios" class="footer-link">Análisis de replays</a>
-        </div>
-
-        <div class="col-lg-3">
-          <p class="footer-titulo-col">ENCONTRAME EN</p>
-          <div class="d-flex flex-wrap gap-2 mb-3">
-            <a href="#" class="rrss-btn" title="Discord"><i class="bi bi-discord"></i></a>
-            <a href="#" class="rrss-btn" title="Twitter/X"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="rrss-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="rrss-btn" title="YouTube"><i class="bi bi-youtube"></i></a>
+        <div class="col-md-4 mb-4">
+          <p class="footer-titulo-col">Redes</p>
+          <!-- los iconos de redes los copie del ejemplo de bootstrap icons -->
+          <div class="d-flex gap-2 mb-2">
+            <a href="#" class="btn-red"><i class="bi bi-discord"></i></a>
+            <a href="#" class="btn-red"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="btn-red"><i class="bi bi-instagram"></i></a>
           </div>
-          <p style="font-size:0.82rem; color:#3d5166;">
-            <i class="bi bi-envelope-fill" style="color:var(--azul-rocket)"></i>
-            &nbsp;yolitobaby2@gmail.com
-          </p>
+          <p style="font-size: 0.82rem; color: #555;">yolitobaby2@gmail.com</p>
         </div>
 
       </div>
 
-      <div class="footer-bottom text-center">
-        © 2025 · Adrian Taracena · hecho con CSS, Bootstrap y muchas horas de RL
-      </div>
+      <hr style="border-color: #222;" />
+      <p class="text-center" style="color: #444; font-size: 0.8rem;">
+        2025 · Adrian Taracena · hecho con Bootstrap y mucho youtube
+      </p>
     </div>
   </footer>
 
 
-  <!-- Bootstrap JS Bundle — CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
